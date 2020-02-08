@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/destination_home">
+
+    <fragment
+        android:id="@+id/destination_home"
+        android:name="com.globussoft.navigationwithjava.HomeFragments"
+        android:label="Home"
+        tools:layout="@layout/home_fragment" />
+    <fragment
+        android:id="@+id/destination_camera"
+        android:name="com.globussoft.navigationwithjava.CameraFragments"
+        android:label="Camera"
+        tools:layout="@layout/fragment_camera">
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/destination_photos" >
+            <argument android:defaultValue="0"
+                android:name="noOfPhotos" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/destination_photos"
+        android:name="com.globussoft.navigationwithjava.PhotosFragments"
+        android:label="Photos"
+        tools:layout="@layout/fragment_photos_fragments" >
+        <action
+            android:id="@+id/action_destination_home"
+            app:destination="@id/destination_home" />
+        <action
+            android:id="@+id/action_destination_camera"
+            app:destination="@+id/destination_camera" />
+
+        <argument
+            android:name="noOfPhotos"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/destination_settings"
+        android:name="com.globussoft.navigationwithjava.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" >
+
+    </fragment>
+
+</navigation>
