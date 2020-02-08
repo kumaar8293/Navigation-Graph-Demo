@@ -1,4 +1,4 @@
-package com.globussoft.navigationwithjava;
+package com.mukesh.navigationwithjava;
 
 import org.junit.Test;
 

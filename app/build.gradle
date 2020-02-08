@@ -5,7 +5,7 @@ apply plugin: 'androidx.navigation.safeargs'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.globussoft.navigationwithjava"
+        applicationId "com.mukesh.navigationwithjava"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
